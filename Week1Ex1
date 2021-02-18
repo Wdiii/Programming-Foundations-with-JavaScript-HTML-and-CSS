@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Build a “My Interests” Web Page</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> My Interests </title>
+</head>
+
+<body>
+
+  <div>
+    <h1>Effy's Page of Interests</h1>
+    <p> Hi, I'm Effy. This is an introudction page of myself. The following paragraph will show you what I like and dislike. </p>
+  </div>
+  <div>
+    <h2>The top 5 things I like: </h2>
+    <h3>Here are my answers: </h3>
+    <p> Hiking, Yoga, Snorkeling, Travelling, and Drawing. </p>
+  </div>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
