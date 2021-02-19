@@ -1,0 +1,40 @@
+body {
+  background-color: PowderBlue;
+}
+h1{
+  text-align: center;
+  color:SteelBlue;
+}
+h2{
+  color:CornflowerBlue;
+}	
+table {
+  border-style: solid;
+  border-color:Navy;
+  margin: 0px 2px 15px 2px;
+}
+#viewImg{
+  border: solid;
+  border-color:Navy;
+}
+.introdiv{
+  border: solid;
+  border-radius: 25px;
+  padding: 0px 17px 5px 17px;
+  background-color: LightCyan;
+  margin: 0px 2px 15px 2px;
+}
+.hikediv{
+  border: solid;
+  border-radius: 25px;
+  padding: 0px 17px 5px 17px;
+  background-color: LightCyan;
+  margin: 0px 2px 15px 2px;
+}
+.traveldiv{
+  border: solid;
+  border-radius: 25px;
+  padding: 0px 17px 5px 17px;
+  background-color: LightCyan; 
+  margin: 0px 2px 15px 2px;
+}
