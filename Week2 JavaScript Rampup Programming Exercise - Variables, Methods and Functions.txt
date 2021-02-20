@@ -1,0 +1,70 @@
+// Reading: Rampup Programming Exercise - Variables, Methods and Functions
+// Exercise 1 - Make a Phrase From Three Words
+function phrase3words(value1, value2, value3) {
+    var ans = value1+" "+value2+" "+value3;
+    return ans;
+}
+var result1 = phrase3words("smile","at","everyone");
+print(result1);
+var result2 = phrase3words("everyone","wave", "back");
+print(result2);
+var result3 = phrase3words("coding","is", "fun");
+print(result3);
+
+//Exercise 2 - Format a name
+function reformatName(first, last) {
+    var ans = last+", "+first
+    return ans
+};
+var result = reformatName("Susan", "Rodger");
+print(result);
+result = reformatName("Robert", "Duvall");
+print(result);
+
+//Exercise 3 - Number of pixels in an image
+function numberPixels(namefile) {
+    var someImg = new SimpleImage(namefile);
+    var height = someImg.getHeight();
+    var width = someImg.getWidth();
+    return height*width;
+};
+var result = numberPixels("chapel.png");
+print(result);
+result = numberPixels("dinos.png");
+print(result);
+
+//Exercise 4 - Perimeter of an imag
+function perimeter(imageName) {
+    var someImg = new SimpleImage(imageName);
+    var height = someImg.getHeight();
+    var width = someImg.getWidth();
+    return (height+width)*2;
+};
+print(perimeter("rodger.png"));
+
+//Exercise 5 - Print the RGB values of a pixel
+function printPixel(nameImage, xpos, ypos) {
+    var someImg = new SimpleImage(nameImage);
+    var red = someImg.getRed(xpos, ypos);
+    var green = someImg.getGreen(xpos, ypos);
+    var blue = someImg.getBlue(xpos, ypos);
+    print("red is "+ red);
+    print("green is "+ green);
+    print("blue is "+ blue);
+}
+printPixel("drewgreen.png",10, 10);
+printPixel("drewgreen.png",250, 500);
+
+//Exercise 6 - Sum of the RGB values for a Pixel
+function sumPixel(nameOfImage, xpos, ypos) {
+    var someImg = new SimpleImage(nameOfImage);
+    var red = someImg.getRed(xpos, ypos);
+    var green = someImg.getGreen(xpos, ypos);
+    var blue = someImg.getBlue(xpos, ypos);
+    return red+green+blue
+}
+var answer = sumPixel("drewgreen.png", 250, 500);
+print(answer);
+answer = sumPixel("drewgreen.png",10, 10);
+print(answer);
+
