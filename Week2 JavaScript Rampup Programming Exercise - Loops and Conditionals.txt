@@ -1,0 +1,125 @@
+// Reading: Rampup Programming Exercise - Loops and Conditionals
+// Exercise 1 - Turn the chapel red.
+var image = new SimpleImage("chapel.png");
+for (var pixel of image.values()) {
+    pixel.setRed(255);
+}
+print(image);
+
+// Exercise 2 - Remove all the red
+var image = new SimpleImage("chapel.png");
+for (var pixel of image.values()) {
+    pixel.setRed(0);
+}
+print(image);
+
+// Exercise 3 - Turn the eggs less red
+var image = new SimpleImage("eastereggs.jpg");
+for (var pixel of image.values()) {
+    if (pixel.getRed() > 70) {
+        pixel.setRed(70);
+    }
+}
+print(image);
+
+// Exercise 4 - Add Thick Black Line to Bottom of Owen
+var image = new SimpleImage("astrachan.jpg");
+for (var pixel of image.values()) {
+    if (pixel.getY() >= image.getHeight()-10) {
+        pixel.setRed(0);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+    }
+}
+print(image);
+
+// Exercise 5 - Green square in top left corner
+var image = new SimpleImage("chapel.png");
+for (var pixel of image.values()) {
+    if ((pixel.getY() <= 50) && (pixel.getX() <= 50)) {
+        pixel.setRed(0);
+        pixel.setGreen(255);
+        pixel.setBlue(0);
+    }
+}
+print(image);
+
+// Exercise 6 - Rectangle of any color in top right corner
+function topRightCorner(cornerWidth, cornerHeight, someImage, red, green, blue) {
+    var image = new SimpleImage(someImage);
+    for (var pixel of image.values()) {
+        if ((pixel.getY() <= cornerHeight) && (pixel.getX() >= image.getWidth()-cornerWidth)) {
+            pixel.setRed(red);
+            pixel.setGreen(green);
+            pixel.setBlue(blue);
+        }
+    }
+    return image;
+}
+
+var picture = new SimpleImage("chapel.png");
+var result = topRightCorner(30, 60, picture, 255, 255, 0);
+print(result);
+var picture2 = new SimpleImage("smalllion.jpg");
+var result2 = topRightCorner(125, 20, picture2, 255, 0, 0);
+print(result2);
+
+// Exercise 7 - Changes in Red
+function changeRed(width, height) {
+    var picture = new SimpleImage(width, height);
+    var red = 0;
+    for (var pixel of picture.values()) {
+        pixel.setRed(pixel.getX());
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+    }
+    return picture;
+}
+
+var result = changeRed(256,200);
+print(result);
+
+// Second Way
+function changeRed(width, height) {
+    var picture = new SimpleImage(width, height);
+    var red = 0;
+    for (var pixel of picture.values()) {
+        pixel.setRed(red);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+        if (pixel.getRed() < 255) {
+            red = red + 1;
+        }
+        if (pixel.getRed() == 255) {
+            red = 0;
+        }
+    }
+    return picture;
+}
+
+var result = changeRed(256,200);
+print(result);
+
+// OPTIONAL: ONE CHANGE
+function changeColor(width, height) {
+    var picture = new SimpleImage(width, height);
+    var red = 0;
+    var green = 200
+    var blue = 100
+    for (var pixel of picture.values()) {
+        pixel.setRed(red);
+        pixel.setGreen(green);
+        pixel.setBlue(blue);
+        if (pixel.getRed() < 255) {
+            red = red + 1;
+        }
+        if (pixel.getRed() == 255) {
+            red = 0;
+        }
+    }
+    return picture;
+}
+
+var result = changeColor(256,200);
+print(result);
+
