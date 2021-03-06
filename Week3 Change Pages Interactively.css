@@ -1,0 +1,28 @@
+h2 {
+  color: blue;
+  font-family: verdana;
+  background-color: lightblue;
+  padding: 10px;
+  width: 300pt
+}
+div {
+  font-size: 15pt;
+  padding: 5px;
+  width: 150pt
+}
+#div1 { 
+  border-style: dashed; 
+  margin-top: 30px;
+}
+#div2 { 
+  border-style: inset;
+}
+.blueback {
+  background-color: lightblue;
+}
+.greenback {
+  background-color: lightgreen;
+}
+.orangeback {
+  background-color: orange;
+}
